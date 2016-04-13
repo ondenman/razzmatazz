@@ -1,0 +1,228 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>razzmatazz.js</title>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <script src="razzmatazz.js"></script>
+</head>
+<body>
+    <div id="sections-wrapper">
+        <section>
+            <h1>razzmatazz.js</h1>
+        </section>
+        <section>
+            <div class="content-wrapper" id="rainbow-content">
+                <p>Razzmatazz is a simple javascript module for applying gradients to groups of HTML elements.</p>
+                <p>Razzmatazz is a simple javascript module for applying gradients to groups of HTML elements.</p>
+                <p>Razzmatazz is a simple javascript module for applying gradients to groups of HTML elements.</p>
+                <p>Razzmatazz is a simple javascript module for applying gradients to groups of HTML elements.</p>
+            </div>
+        </section>
+        <section>
+            <div class="content-wrapper">
+                <h2>usage</h2>
+                <div div class="content-wrapper" id="foreground-gradient">
+                    <p>Each paragraph has a different text color!</p>
+                    <p>Each paragraph has a different text color!</p>
+                    <p>Each paragraph has a different text color!</p>
+                    <p>Each paragraph has a different text color!</p>
+                </div>
+
+                <div div class="content-wrapper" id="background-gradient">
+                    <p>Each paragraph has a different background color!</p>
+                    <p>Each paragraph has a different background color!</p>
+                    <p>Each paragraph has a different background color!</p>
+                    <p>Each paragraph has a different background color!</p>
+                </div>
+
+                <div div class="content-wrapper" id="border-gradient">
+                    <p>Each paragraph has a different border color!</p>
+                    <p>Each paragraph has a different border color!</p>
+                    <p>Each paragraph has a different border color!</p>
+                    <p>Each paragraph has a different border color!</p>
+                </div>
+
+                <pre>
+&lt;head&gt;
+&lt;script src="razzmatazz.js">&lt;/script>
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="content-wrapper" id="foreground-gradient"&gt;
+        &lt;p&gt;Each paragraph has a different text color!&lt;/p&gt;
+        &lt;p&gt;Each paragraph has a different text color!&lt;/p&gt;
+        &lt;p&gt;Each paragraph has a different text color!&lt;/p&gt;
+        &lt;p&gt;Each paragraph has a different text color!&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="content-wrapper" id="background-gradient"&gt;
+        &lt;p&gt;Each paragraph has a different background color!&lt;/p&gt;
+        &lt;p&gt;Each paragraph has a different background color!&lt;/p&gt;
+        &lt;p&gt;Each paragraph has a different background color!&lt;/p&gt;
+        &lt;p&gt;Each paragraph has a different background color!&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="content-wrapper" id="border-gradient"&gt;
+        &lt;p&gt;Each paragraph has a different border color!&lt;/p&gt;
+        &lt;p&gt;Each paragraph has a different border color!&lt;/p&gt;
+        &lt;p&gt;Each paragraph has a different border color!&lt;/p&gt;
+        &lt;p&gt;Each paragraph has a different border color!&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        <div class="darker">        razzmatazz.foreground({
+            container: "foreground-gradient",
+            children: "p",
+            startColor: "#ffff00",
+            endColor: "#ff00ff"
+        })
+
+        razzmatazz.background({
+            container: "background-gradient",
+            children: "p",
+            startColor: "#ffff00",
+            endColor: "#ff00ff"
+        })
+
+        razzmatazz.border({
+            container: "border-gradient",
+            children: "p",
+            startColor: "#ffff00",
+            endColor: "#ff00ff"
+        })</div>
+    &lt;/script&gt;
+&lt;/body&gt;</pre>
+            </div>
+        </section>
+        <section>
+            <div class="list-wrapper">
+                <ul id="list">
+                    <li>list item: one</li>
+                    <li>list item: two</li>
+                    <li>list item: three</li>
+                    <li>list item: four</li>
+                    <li>list item: five</li>
+                    <li>list item: six</li>
+                    <li>list item: seven</li>
+                    <li>list item: eight</li>
+                    <li>list item: nine</li>
+                    <li>list item: ten</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="content-wrapper">
+                <div id="buttons">
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                    <button>button</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="decorative-divs-wrapper">
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+        <div class="colors"></div>
+    </div>
+
+<script>
+
+    razzmatazz.background({
+        container: "sections-wrapper",
+        children: "section",
+        startColor: "#ff00ff",
+        endColor: "#00ffff" 
+    })
+
+
+    razzmatazz.foreground({
+        container: "rainbow-content",
+        children: "p",
+        startColor: "#ffff00",
+        endColor: "#ff00ff"
+    })
+
+    razzmatazz.background({
+        container: "list",
+        children: "li",
+        startColor: "#ff00ff",
+        endColor: "#ffff00"
+    })
+
+    razzmatazz.background({
+        container: "buttons",
+        children: "button",
+        startColor: "#ff00ff",
+        endColor: "#ffff00"
+    })
+
+    razzmatazz.foreground({
+        container: "foreground-gradient",
+        children: "p",
+        startColor: "#ffff00",
+        endColor: "#ff00ff"
+    })
+
+    razzmatazz.background({
+        container: "background-gradient",
+        children: "p",
+        startColor: "#ffff00",
+        endColor: "#ff00ff"
+    })
+
+    razzmatazz.border({
+        container: "border-gradient",
+        children: "p",
+        startColor: "#ffff00",
+        endColor: "#ff00ff"
+    })
+
+    razzmatazz.background({
+        container: "decorative-divs-wrapper",
+        children: "colors",
+        startColor: "#ffff00",
+        endColor: "#ff00ff" 
+    })
+
+</script>
+</body>
+</html>
