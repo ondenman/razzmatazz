@@ -2,54 +2,54 @@
 
 var razzmatazz = (function(){
 
-    var containerName = "body";
-    var childElementsName = "p";
-    var startColor = "ffffff";
-    var endColor = "000000";
-    var style = "foreground";
+    var container = "body",
+        children = "p",
+        startColor = "ffffff",
+        endColor = "000000",
+        colorStyle = "foreground";
 
     function foreground(options) {
-        style = "foreground";
+        colorStyle = "foreground";
         run(options);
     }
 
     function background(options) {
-        style = "background";
+        colorStyle = "background";
         run(options);
     }
 
     function border(options) {
-        style = "border";
+        colorStyle = "border";
         run(options);
     }
 
     function run(options) {
 
-        options.hasOwnProperty('container') ? containerName = options.container.trim() : containerName = containerName;
-        options.hasOwnProperty('children') ? childElementsName = options.children.trim() : childElementsName = childElementsName;
-        options.hasOwnProperty('startColor') ? startColor = options.startColor.trim().replace('#','') : startColor = startColor;
-        options.hasOwnProperty('endColor') ? endColor = options.endColor.trim().replace('#','') : endColor = endColor;
+        container = options.container.trim()|| container;
+        children = options.children.trim() || children;
+        startColor = options.startColor.trim().replace('#','') || startColor;
+        endColor = options.endColor.trim().replace('#','') || endColor;
+        colorStyle = options.style || colorStyle;
+
+        var containerElement = document.getElementById(container);
+
+        if (containerElement === null) {
+            console.log("razzmatazz.js: Cannot use container '"+options.container+"' Please make sure ID is present in HTML. Specify container element by ID.");
+        } 
 
         if (isColorGood(startColor) && isColorGood(endColor)) {
-           
-            startColor = colorToRGBDecimal(startColor);
-            endColor = colorToRGBDecimal(endColor);
-            var container = document.getElementById(containerName);
-            if (!container) console.log("razzmatazz.js: Cannot use container '"+options.container+"' Please make sure ID is present in HTML. Specify container element by ID.");
-            addColorStylesToChildElements(container);
-
+            addColorStylesToChildElements(containerElement);
         } else {
             console.log("razzmatazz.js: Problem with a color value. Please makes sure values are hexadecimal.");
         }
-
     }
 
-    function addColorStylesToChildElements(container) {
+    function addColorStylesToChildElements(el) {
 
-        var childElements = container.getElementsByClassName(childElementsName);
+        var childElements = el.getElementsByClassName(children);
 
         if (childElements.length === 0) {
-            childElements = container.getElementsByTagName(childElementsName);
+            childElements = el.getElementsByTagName(children);
         }
 
         var numberOfChildElements = childElements.length;
@@ -57,11 +57,13 @@ var razzmatazz = (function(){
         var position = 1;
 
         for (var i=0; i<childElements.length; i++) {
-            var color = gradeForPosition (startColor, endColor, position);
+
+            var color = gradeForPosition (colorToRGBDecimal(startColor), colorToRGBDecimal(endColor), position);
             color = colorRGBtoHex(color);
-            if (style === "background") {
+
+            if (colorStyle === "background") {
                 childElements[i].style.backgroundColor = color;
-            } else if (style === "border") {
+            } else if (colorStyle === "border") {
                 childElements[i].style.borderColor = color;
             } else {
                 childElements[i].style.color = color;
@@ -88,7 +90,7 @@ var razzmatazz = (function(){
     }
 
     function isColorGoodLength (color) {
-        if (color.length == 6) {
+        if (color.length === 6) {
             return true;
         }
         return false;
@@ -130,4 +132,4 @@ var razzmatazz = (function(){
         border: border
     };
 
-})();
+}());
