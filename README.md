@@ -4,6 +4,11 @@
 
 Razzmatazz is a simple javascript module that applies gradients to groups of HTML elements.
 
+![Applied to text](https://raw.githubusercontent.com/ondenman/razzmatazz/master/resources/text-example.png)
+
+![Applied to a list](https://raw.githubusercontent.com/ondenman/razzmatazz/master/resources/list-example.png)
+
+
 ##Usage
 
  - Specify a container element with an ID. 
@@ -58,7 +63,7 @@ razzmatazz.border();     //applies colors to border-color style of child element
         <p class="gradient-child">Four</p>
         <p class="gradient-child">Five</p>
     </div>
-    
+
     <script>
         razzmatazz.foreground({
             container: "gradient-wrapper",
