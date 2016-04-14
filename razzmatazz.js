@@ -24,7 +24,6 @@ var razzmatazz = (function(){
     }
 
     function run(options) {
-
         container = options.container.trim()|| container;
         children = options.children.trim() || children;
         startColor = options.startColor.trim().replace('#','') || startColor;
@@ -45,7 +44,6 @@ var razzmatazz = (function(){
     }
 
     function addColorStylesToChildElements(el) {
-
         var childElements = el.getElementsByClassName(children);
 
         if (childElements.length === 0) {
