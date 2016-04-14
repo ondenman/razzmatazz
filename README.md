@@ -11,9 +11,6 @@ Razzmatazz is a simple javascript module that applies gradients to groups of HTM
 
 ##Usage
 
- - Specify a container element with an ID. 
- - Specify class name/tag name of child elements.
-
 Three functions are provided:
 ~~~
 razzmatazz.background(); //applies colors to background style of child elements
@@ -75,7 +72,7 @@ razzmatazz.border();     //applies colors to border-color style of child element
 </body>
 ~~~
 
-##Options
+###Options
 
 ~~~
 ({
