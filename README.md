@@ -4,9 +4,9 @@
 
 Razzmatazz is a simple javascript module that applies gradients to groups of HTML elements.
 
-![Applied to text](https://raw.githubusercontent.com/ondenman/razzmatazz/master/resources/text-example.png)
+![Applied to text](./resources/text-example.png)
 
-![Applied to a list](https://raw.githubusercontent.com/ondenman/razzmatazz/master/resources/list-example.png)
+![Applied to a list](./resources/list-example.png)
 
 
 ##Usage
